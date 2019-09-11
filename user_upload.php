@@ -98,15 +98,15 @@ function checkUPH($arguments) {
 	
 	if (!array_key_exists('u', $arguments)){ 
 		$allGood = false;
-		$msg .- 'Username is missing. ';
+		$msg .= 'Username is missing. ';
 	}
 	if (!array_key_exists('p', $arguments)){ 
 		$allGood = false;
-		$msg .- 'Password is missing. ';	
+		$msg .= 'Password is missing. ';	
 	}
-	if (array_key_exists('h', $arguments)){ 
+	if (!array_key_exists('h', $arguments)){ 
 		$allGood = false;
-		$msg .- 'Host is missing. ';
+		$msg .= 'Host is missing. ';
 	}
 	
 	return array($allGood, $msg);
